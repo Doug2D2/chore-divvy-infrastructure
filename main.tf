@@ -19,3 +19,10 @@ module "app" {
     ami = var.ami
     iam_profile_name = module.iam.profile_name
 }
+
+module "web" {
+    source = "./modules/web"
+
+    ami = var.ami
+    iam_profile_name = module.iam.profile_name
+}
